@@ -6,16 +6,18 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
-app.post('/', (req, res) => {
+
+const login = (req, res) => {
     console.log('req send ==>', req.body)
 
-    if(req.body.userName === '1234' && req.body.passWord === 'admin'){
+    if(req.body.userName === 'admin' && req.body.password === 'admin'){
         res.send("Login Successful")
     } else {
-        req.status(401);
+        res.status(401);
         res.send("Login Failed")
     }
-});
+}
+app.post('/', login);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
