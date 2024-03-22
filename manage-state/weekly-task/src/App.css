@@ -37,6 +37,12 @@
   }
 }
 
+.api-component {
+  padding: 20px;
+}
+.button {
+  margin-right: 10px;
+}
 .component {
   padding: 20px;
 }
