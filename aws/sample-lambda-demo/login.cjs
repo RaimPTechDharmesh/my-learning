@@ -1,12 +1,4 @@
-const login = (req, res) => {
-    console.log('req send ==>', req.body)
-
-    const {userName, password} = req.body;
-    const result = performLogin(userName, password);
-    res.send(result);
-}
-
-const performLogin = (userName, password) => {
+module.exports = function performLogin(userName, password) {
     if (isValidUser(userName, password)) {
         return "Login Successful";
     } else {
@@ -20,8 +12,4 @@ function isValidUser(userName, password) {
     } else {
         return false;
     }
-}
-
-module.exports = {
-    login, performLogin
 }
