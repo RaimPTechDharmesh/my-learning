@@ -7,6 +7,9 @@
     "start": "nodemon local-lambda.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "aws-sdk": "^2.1584.0"
+  },
   "author": "",
   "license": "ISC"
 }
